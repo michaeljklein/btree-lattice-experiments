@@ -8,3 +8,4 @@
 *.glob
 .coqdeps.d
 deps
+html
