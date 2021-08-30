@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Btree.Lattice</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Btree.Lattice</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Basics.html#"><span class="id" title="library">Coq.Program.Basics</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Theory</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.html#"><span class="id" title="library">Embed.Theory.Btree</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Lattice.html#"><span class="id" title="library">Embed.Theory.Lattice</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a name="b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">&quot;</span></a>btree!" := (@<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#fbbfb55f1ee0a61e0473fa0799e34e17"><span class="id" title="notation">()</span></a>) (<span class="id" title="var">only</span> <span class="id" title="var">parsing</span>, <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0).<br/>
+<span class="id" title="keyword">Notation</span> <a name="f697553985c9c3be91639f318c9e48db"><span class="id" title="notation">&quot;</span></a>bnil!" := (@<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#fbbfb55f1ee0a61e0473fa0799e34e17"><span class="id" title="notation">()</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#tt"><span class="id" title="constructor">tt</span></a>) (<span class="id" title="var">only</span> <span class="id" title="var">parsing</span>, <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0).<br/>
+<span class="id" title="keyword">Notation</span> <a name="42a137940c0b224b3426ec9a33257a2d"><span class="id" title="notation">&quot;</span></a>btree2!" := (@<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#fbbfb55f1ee0a61e0473fa0799e34e17"><span class="id" title="notation">()</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#11c698c8685bb8ab1cf725545c085ac4"><span class="id" title="notation">×</span></a> @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#fbbfb55f1ee0a61e0473fa0799e34e17"><span class="id" title="notation">()</span></a>) (<span class="id" title="var">only</span> <span class="id" title="var">parsing</span>, <span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0).<br/>
+
+<br/>
+<span class="id" title="keyword">Equations</span> <a name="and_btree"><span class="id" title="definition">and_btree</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#magma"><span class="id" title="definition">magma</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a> :=<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#f5cb26d96fc0400fc3c881290947e554"><span class="id" title="notation">()</span></a> ;<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">_</span></a> <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">_</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#f5cb26d96fc0400fc3c881290947e554"><span class="id" title="notation">()</span></a> ;<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">_</span></a> <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">_</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#x"><span class="id" title="variable">x</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#f5cb26d96fc0400fc3c881290947e554"><span class="id" title="notation">()</span></a> ;<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#y"><span class="id" title="variable">y</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#z"><span class="id" title="variable">z</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#w"><span class="id" title="variable">w</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <span class="id" title="var">x</span> <span class="id" title="var">z</span>) (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <span class="id" title="var">y</span> <span class="id" title="var">w</span>).<br/>
+<span class="id" title="keyword">Global Transparent</span> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="and_btree_Commutative"><span class="id" title="instance">and_btree_Commutative</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#Commutative"><span class="id" title="class">Commutative</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> :=<br/>
+&nbsp;&nbsp;{ <a class="idref" href="Embed.Theory.Lattice.html#commutativity"><span class="id" title="definition">commutativity</span></a> := <span class="id" title="var">_</span> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="and_btree_associative"><span class="id" title="definition">and_btree_associative</span></a> (<span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> : <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a>) <a class="idref" href="Embed.Theory.Btree.Lattice.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#c"><span class="id" title="variable">c</span></a>).<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="and_btree_Associative"><span class="id" title="instance">and_btree_Associative</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#Associative"><span class="id" title="class">Associative</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> :=<br/>
+&nbsp;&nbsp;{ <a class="idref" href="Embed.Theory.Lattice.html#associativity"><span class="id" title="definition">associativity</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree_associative"><span class="id" title="definition">and_btree_associative</span></a> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Equations</span> <a name="or_btree"><span class="id" title="definition">or_btree</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#magma"><span class="id" title="definition">magma</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a> :=<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#tt"><span class="id" title="constructor">tt</span></a> ;<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#y"><span class="id" title="variable">y</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> ;<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#y"><span class="id" title="variable">y</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> ;<br/>
+<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#y"><span class="id" title="variable">y</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#z"><span class="id" title="variable">z</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#w"><span class="id" title="variable">w</span></a>) := <a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <span class="id" title="var">x</span> <span class="id" title="var">z</span>) (<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <span class="id" title="var">y</span> <span class="id" title="var">w</span>).<br/>
+<span class="id" title="keyword">Global Transparent</span> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="or_btree_Idempotent"><span class="id" title="instance">or_btree_Idempotent</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#Idempotent"><span class="id" title="class">Idempotent</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> :=<br/>
+&nbsp;&nbsp;{ <a class="idref" href="Embed.Theory.Lattice.html#idempotency"><span class="id" title="definition">idempotency</span></a> := <span class="id" title="var">_</span> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="or_btree_Commutative"><span class="id" title="instance">or_btree_Commutative</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#Commutative"><span class="id" title="class">Commutative</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> :=<br/>
+&nbsp;&nbsp;{ <a class="idref" href="Embed.Theory.Lattice.html#commutativity"><span class="id" title="definition">commutativity</span></a> := <span class="id" title="var">_</span> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="or_btree_associative"><span class="id" title="definition">or_btree_associative</span></a> (<span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> : <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a>) <a class="idref" href="Embed.Theory.Btree.Lattice.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#c"><span class="id" title="variable">c</span></a>).<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="or_btree_Associative"><span class="id" title="instance">or_btree_Associative</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#Associative"><span class="id" title="class">Associative</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> :=<br/>
+&nbsp;&nbsp;{ <a class="idref" href="Embed.Theory.Lattice.html#associativity"><span class="id" title="definition">associativity</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree_associative"><span class="id" title="definition">or_btree_associative</span></a> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="and_or_absorptive"><span class="id" title="definition">and_or_absorptive</span></a> (<span class="id" title="var">a</span> <span class="id" title="var">b</span> : <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a>.<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="and_or_Absorptive"><span class="id" title="instance">and_or_Absorptive</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#Absorptive"><span class="id" title="class">Absorptive</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> := { <a class="idref" href="Embed.Theory.Lattice.html#absorptivity"><span class="id" title="definition">absorptivity</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_or_absorptive"><span class="id" title="definition">and_or_absorptive</span></a> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="or_and_absorptive"><span class="id" title="definition">or_and_absorptive</span></a> (<span class="id" title="var">a</span> <span class="id" title="var">b</span> : <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a>.<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="or_and_Absorptive"><span class="id" title="instance">or_and_Absorptive</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#Absorptive"><span class="id" title="class">Absorptive</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> := { <a class="idref" href="Embed.Theory.Lattice.html#absorptivity"><span class="id" title="definition">absorptivity</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_and_absorptive"><span class="id" title="definition">or_and_absorptive</span></a> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="btree_unit_Lattice"><span class="id" title="instance">btree_unit_Lattice</span></a> : <a class="idref" href="Embed.Theory.Lattice.html#Lattice"><span class="id" title="class">Lattice</span></a> <a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> := {<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#lmeet"><span class="id" title="method">lmeet</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#ljoin"><span class="id" title="method">ljoin</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a>;<br/>
+<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#lmeet_commutative"><span class="id" title="method">lmeet_commutative</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree_Commutative"><span class="id" title="instance">and_btree_Commutative</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#lmeet_associative"><span class="id" title="method">lmeet_associative</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree_Associative"><span class="id" title="instance">and_btree_Associative</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#lmeet_absorptive"><span class="id" title="method">lmeet_absorptive</span></a>  := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_or_Absorptive"><span class="id" title="instance">and_or_Absorptive</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#lmeet_idempotent"><span class="id" title="method">lmeet_idempotent</span></a>  := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree_Idempotent"><span class="id" title="instance">and_btree_Idempotent</span></a>;<br/>
+<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#ljoin_commutative"><span class="id" title="method">ljoin_commutative</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree_Commutative"><span class="id" title="instance">or_btree_Commutative</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#ljoin_associative"><span class="id" title="method">ljoin_associative</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree_Associative"><span class="id" title="instance">or_btree_Associative</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#ljoin_absorptive"><span class="id" title="method">ljoin_absorptive</span></a>  := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_and_Absorptive"><span class="id" title="instance">or_and_Absorptive</span></a>;<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#ljoin_idempotent"><span class="id" title="method">ljoin_idempotent</span></a>  := <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree_Idempotent"><span class="id" title="instance">or_btree_Idempotent</span></a><br/>
+}.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="and_or_distributive"><span class="id" title="definition">and_or_distributive</span></a> (<span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> : <a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">btree</span></a><a class="idref" href="Embed.Theory.Btree.Lattice.html#b12f73601d412e3a47b29bfdf4678bb6"><span class="id" title="notation">!</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#c"><span class="id" title="variable">c</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#b"><span class="id" title="variable">b</span></a>) (<a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#c"><span class="id" title="variable">c</span></a>).<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="and_or_Distributive"><span class="id" title="instance">and_or_Distributive</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Lattice.html#Distributive"><span class="id" title="class">Distributive</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_btree"><span class="id" title="definition">and_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Lattice.html#or_btree"><span class="id" title="definition">or_btree</span></a> := { <a class="idref" href="Embed.Theory.Lattice.html#distributivity"><span class="id" title="definition">distributivity</span></a> := <a class="idref" href="Embed.Theory.Btree.Lattice.html#and_or_distributive"><span class="id" title="definition">and_or_distributive</span></a> }.<br/>
+
+<br/>
+<span class="id" title="keyword">Obligations</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

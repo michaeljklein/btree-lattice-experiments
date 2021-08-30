@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Btree.Refined.Leaves</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Btree.Refined.Leaves</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Theory</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#"><span class="id" title="library">Embed.Theory.Functor.Refined.Iso</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.html#"><span class="id" title="library">Embed.Theory.Btree</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Functor.html#"><span class="id" title="library">Embed.Theory.Btree.Functor</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Leaves.html#"><span class="id" title="library">Embed.Theory.Btree.Leaves</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Canonical.html#"><span class="id" title="library">Embed.Theory.Btree.Canonical</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.html#"><span class="id" title="library">Embed.Theory.Btree.Canonical.Refined</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#"><span class="id" title="library">Embed.Theory.Btree.Canonical.Refined.Iso</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Utils.html#"><span class="id" title="library">Embed.Theory.Utils</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="iso_refined_btree_eq_num_leaves"><span class="id" title="lemma">iso_refined_btree_eq_num_leaves</span></a> (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="eq_num_leaves_iso_refined_btree"><span class="id" title="lemma">eq_num_leaves_iso_refined_btree</span></a> (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Theorem</span> <a name="iso_refined_num_leaves"><span class="id" title="lemma">iso_refined_num_leaves</span></a> (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a> <span class="id" title="notation">↔</span> <a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Corollary</span> <a name="not_iso_refined_bcons_bnil"><span class="id" title="lemma">not_iso_refined_bcons_bnil</span></a> (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">pf</span> : @<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Btree.Functor.html#btree_Functor"><span class="id" title="instance">btree_Functor</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#y"><span class="id" title="variable">y</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#tt"><span class="id" title="constructor">tt</span></a>)) : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#False"><span class="id" title="inductive">False</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

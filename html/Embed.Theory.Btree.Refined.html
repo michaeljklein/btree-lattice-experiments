@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Btree.Refined</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Btree.Refined</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Theory</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Coq</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Void.html#"><span class="id" title="library">Embed.Theory.Functor.Void</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#"><span class="id" title="library">Embed.Theory.Functor.Refined.Def</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#"><span class="id" title="library">Embed.Theory.Functor.Refined.Iso</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.html#"><span class="id" title="library">Embed.Theory.Btree</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Functor.html#"><span class="id" title="library">Embed.Theory.Btree.Functor</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Monad.html#"><span class="id" title="library">Embed.Theory.Btree.Monad</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Refined.Iso.html#"><span class="id" title="library">Embed.Theory.Btree.Refined.Iso</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Refined.Leaves.html#"><span class="id" title="library">Embed.Theory.Btree.Refined.Leaves</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Refined.Join.html#"><span class="id" title="library">Embed.Theory.Btree.Refined.Join</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="iso_refined_btree_void_ret"><span class="id" title="lemma">iso_refined_btree_void_ret</span></a> {<span class="id" title="var">A</span>} (<span class="id" title="var">x</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#A"><span class="id" title="variable">A</span></a>)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">pf</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> (<a class="idref" href="Embed.Theory.Functor.Void.html#8ee140095d5dbe2ae752a2fb00791d32"><span class="id" title="notation">void</span></a><a class="idref" href="Embed.Theory.Functor.Void.html#8ee140095d5dbe2ae752a2fb00791d32"><span class="id" title="notation">[</span></a><a class="idref" href="Embed.Theory.Btree.Functor.html#btree_Functor"><span class="id" title="instance">btree_Functor</span></a><a class="idref" href="Embed.Theory.Functor.Void.html#8ee140095d5dbe2ae752a2fb00791d32"><span class="id" title="notation">]</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a>) (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Syntax.html#f5cb26d96fc0400fc3c881290947e554"><span class="id" title="notation">()</span></a>)) :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">{</span></a> <span class="id" title="var">y</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">|</span></a> <span class="id" title="projection">ret</span> <a class="idref" href="Embed.Theory.Btree.Refined.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#bc4528e836ab0e91ea7e942fb09e898f"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="iso_refined_btree_void_ret_join"><span class="id" title="lemma">iso_refined_btree_void_ret_join</span></a> {<span class="id" title="var">A</span>} (<span class="id" title="var">x</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> (@<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#A"><span class="id" title="variable">A</span></a>))<br/>
+&nbsp;&nbsp;(<span class="id" title="var">pf</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> (<a class="idref" href="Embed.Theory.Btree.Functor.html#void"><span class="id" title="definition">void</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a>) (<span class="id" title="projection">ret</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#tt"><span class="id" title="constructor">tt</span></a>)) :<br/>
+&nbsp;&nbsp;<span class="id" title="projection">ret</span> (<span class="id" title="projection">join</span> <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="iso_refined_btree_void_join"><span class="id" title="lemma">iso_refined_btree_void_join</span></a> (<span class="id" title="var">x</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> (@<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1)) (<span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">pf</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> (<span class="id" title="notation">join</span><span class="id" title="notation">[</span><a class="idref" href="Embed.Theory.Btree.Functor.html#btree_Functor"><span class="id" title="instance">btree_Functor</span></a><span class="id" title="notation">]</span> <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="Embed.Theory.Btree.Refined.html#y"><span class="id" title="variable">y</span></a>) (<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>) :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;@<a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> (<span class="id" title="definition">Compose</span> <a class="idref" href="Embed.Theory.Btree.Functor.html#btree_Functor"><span class="id" title="instance">btree_Functor</span></a> <a class="idref" href="Embed.Theory.Btree.Functor.html#btree_Functor"><span class="id" title="instance">btree_Functor</span></a>) <a class="idref" href="Embed.Theory.Btree.Refined.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="notation">≅</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="Embed.Theory.Btree.Refined.html#A"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

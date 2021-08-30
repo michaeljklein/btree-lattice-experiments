@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Functor.Refined.Iso</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Functor.Refined.Iso</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Theory</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Coq</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Void.html#"><span class="id" title="library">Embed.Theory.Functor.Void</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#"><span class="id" title="library">Embed.Theory.Functor.Refined.Def</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="IsoRefined"><span class="id" title="section">IsoRefined</span></a>.<br/>
+<span class="id" title="keyword">Context</span> `{<span class="id" title="var">F</span> : <span class="id" title="instance">Coq</span> <span class="id" title="notation">⟶</span> <span class="id" title="instance">Coq</span>}.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="iso_refined"><span class="id" title="definition">iso_refined</span></a> (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#IsoRefined.F"><span class="id" title="variable">F</span></a> 1) : <span class="id" title="keyword">Type</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> <span class="id" title="var">A</span>, <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="notation">≅</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#A"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Equations</span> <a name="id_iso_refined"><span class="id" title="definition">id_iso_refined</span></a> (<span class="id" title="var">x</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#IsoRefined.F"><span class="id" title="variable">F</span></a> 1) : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <span class="id" title="var">x</span> <span class="id" title="var">x</span> :=<br/>
+<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#id_iso_refined"><span class="id" title="definition">id_iso_refined</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> := <span class="id" title="instance">iso_id</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Equations</span> <a name="compose_iso_refined"><span class="id" title="definition">compose_iso_refined</span></a> {<span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#IsoRefined.F"><span class="id" title="variable">F</span></a> 1}<br/>
+&nbsp;&nbsp;(<span class="id" title="var">yz</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#z"><span class="id" title="variable">z</span></a>)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">xy</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#y"><span class="id" title="variable">y</span></a>) :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <span class="id" title="var">x</span> <span class="id" title="var">z</span> :=<br/>
+<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#compose_iso_refined"><span class="id" title="definition">compose_iso_refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#yz"><span class="id" title="variable">yz</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#xy"><span class="id" title="variable">xy</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#w"><span class="id" title="variable">w</span></a> := <span class="id" title="definition">iso_compose</span> (<span class="id" title="var">yz</span> <span class="id" title="var">w</span>) (<span class="id" title="var">xy</span> <span class="id" title="var">w</span>).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="iso_refined_equiv"><span class="id" title="definition">iso_refined_equiv</span></a> {<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#IsoRefined.F"><span class="id" title="variable">F</span></a> 1} : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Classes.CRelationClasses.html#crelation"><span class="id" title="definition">crelation</span></a> (<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#y"><span class="id" title="variable">y</span></a>) :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">fun</span> <span class="id" title="var">xs</span> <span class="id" title="var">ys</span> ⇒ <span class="id" title="keyword">∀</span> <span class="id" title="var">A</span>, <span class="id" title="definition">isomorphism_equiv</span> (<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#xs"><span class="id" title="variable">xs</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#A"><span class="id" title="variable">A</span></a>) (<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#ys"><span class="id" title="variable">ys</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#A"><span class="id" title="variable">A</span></a>).<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="RefinedCat"><span class="id" title="instance">RefinedCat</span></a> : <span class="id" title="class">Category</span> := {<br/>
+&nbsp;&nbsp;<span class="id" title="projection">obj</span>     := <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#IsoRefined.F"><span class="id" title="variable">F</span></a> 1;<br/>
+&nbsp;&nbsp;<span class="id" title="projection">hom</span>     := <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a>;<br/>
+&nbsp;&nbsp;<span class="id" title="projection">homset</span>  := <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ {|<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="constructor">equiv</span>        <span class="id" title="constructor">:=</span> <span class="id" title="constructor">iso_refined_equiv</span><span class="id" title="constructor">;</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="constructor">setoid_equiv</span> <span class="id" title="constructor">:=</span> <span class="id" title="constructor">equiv_iso_refined_equiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;|};<br/>
+&nbsp;&nbsp;<span class="id" title="projection">id</span>      := <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#id_iso_refined"><span class="id" title="definition">id_iso_refined</span></a>;<br/>
+&nbsp;&nbsp;<span class="id" title="projection">compose</span> := <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#compose_iso_refined"><span class="id" title="definition">compose_iso_refined</span></a><br/>
+}.<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#IsoRefined"><span class="id" title="section">IsoRefined</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

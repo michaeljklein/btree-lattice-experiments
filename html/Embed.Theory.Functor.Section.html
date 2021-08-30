@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Functor.Section</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Functor.Section</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Program.Basics.html#"><span class="id" title="library">Coq.Program.Basics</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#"><span class="id" title="library">Coq.Init.Logic</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Logic.Eqdep_dec.html#"><span class="id" title="library">Coq.Logic.Eqdep_dec</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Theory</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Cat</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Coq</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Fun</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Void.html#"><span class="id" title="library">Embed.Theory.Functor.Void</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="FunctorDecomposeCats"><span class="id" title="section">FunctorDecomposeCats</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="ImageCat"><span class="id" title="instance">ImageCat</span></a> {<span class="id" title="var">C</span> <span class="id" title="var">D</span> : <span class="id" title="class">Category</span>} (<span class="id" title="var">F</span> : <a class="idref" href="Embed.Theory.Functor.Section.html#C"><span class="id" title="variable">C</span></a> <span class="id" title="notation">⟶</span> <a class="idref" href="Embed.Theory.Functor.Section.html#D"><span class="id" title="variable">D</span></a>) : <span class="id" title="class">Category</span> := {<br/>
+&nbsp;&nbsp;<span class="id" title="projection">obj</span>     := <span class="id" title="notation">obj</span><span class="id" title="notation">[</span><span class="id" title="var">C</span><span class="id" title="notation">]</span>;<br/>
+&nbsp;&nbsp;<span class="id" title="projection">hom</span>     := <span class="id" title="keyword">fun</span> <span class="id" title="var">A</span> <span class="id" title="var">B</span> ⇒ <span class="id" title="var">F</span> <a class="idref" href="Embed.Theory.Functor.Section.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="notation">~&gt;</span> <span class="id" title="var">F</span> <a class="idref" href="Embed.Theory.Functor.Section.html#B"><span class="id" title="variable">B</span></a>;<br/>
+&nbsp;&nbsp;<span class="id" title="projection">homset</span>  := <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ {| <span class="id" title="constructor">equiv</span> <span class="id" title="constructor">:=</span> <span class="id" title="constructor">equiv</span> |};<br/>
+&nbsp;&nbsp;<span class="id" title="projection">id</span>      := <span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <span class="id" title="notation">fmap</span><span class="id" title="notation">[</span><span class="id" title="var">F</span><span class="id" title="notation">]</span> <span class="id" title="notation">id</span><span class="id" title="notation">[</span><a class="idref" href="Embed.Theory.Functor.Section.html#x"><span class="id" title="variable">x</span></a><span class="id" title="notation">]</span>;<br/>
+}.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="FunctorCat"><span class="id" title="instance">FunctorCat</span></a> {<span class="id" title="var">C</span> : <span class="id" title="class">Category</span>} (<span class="id" title="var">F</span> : <a class="idref" href="Embed.Theory.Functor.Section.html#C"><span class="id" title="variable">C</span></a> <span class="id" title="notation">⟶</span> <span class="id" title="instance">Coq</span>) : <span class="id" title="class">Category</span> := {<br/>
+&nbsp;&nbsp;<span class="id" title="projection">obj</span>     := <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">{</span></a> <span class="id" title="var">x</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">:</span></a> <span class="id" title="notation">obj</span><span class="id" title="notation">[</span><span class="id" title="var">C</span><span class="id" title="notation">]</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">&amp;</span></a> <span class="id" title="var">F</span> <a class="idref" href="Embed.Theory.Functor.Section.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#cc5e56ba3765e2d6b17e66d19b966f1d"><span class="id" title="notation">}</span></a>;<br/>
+&nbsp;&nbsp;<span class="id" title="projection">hom</span>     := <span class="id" title="keyword">fun</span> <span class="id" title="var">xs</span> <span class="id" title="var">ys</span> ⇒ <span class="id" title="var">F</span> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#projT1"><span class="id" title="definition">projT1</span></a> <a class="idref" href="Embed.Theory.Functor.Section.html#xs"><span class="id" title="variable">xs</span></a>) <span class="id" title="notation">~&gt;</span> <span class="id" title="var">F</span> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#projT1"><span class="id" title="definition">projT1</span></a> <a class="idref" href="Embed.Theory.Functor.Section.html#ys"><span class="id" title="variable">ys</span></a>);<br/>
+&nbsp;&nbsp;<span class="id" title="projection">homset</span>  := <span class="id" title="keyword">fun</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span> ⇒ {| <span class="id" title="constructor">equiv</span> <span class="id" title="constructor">:=</span> <span class="id" title="constructor">equiv</span> |};<br/>
+&nbsp;&nbsp;<span class="id" title="projection">id</span>      := <span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <span class="id" title="notation">fmap</span><span class="id" title="notation">[</span><span class="id" title="var">F</span><span class="id" title="notation">]</span> <span class="id" title="notation">id</span><span class="id" title="notation">[</span><a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#projT1"><span class="id" title="definition">projT1</span></a> <a class="idref" href="Embed.Theory.Functor.Section.html#x"><span class="id" title="variable">x</span></a><span class="id" title="notation">]</span>;<br/>
+}.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Embed.Theory.Functor.Section.html#FunctorDecomposeCats"><span class="id" title="section">FunctorDecomposeCats</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

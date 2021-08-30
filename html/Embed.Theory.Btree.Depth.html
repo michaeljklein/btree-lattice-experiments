@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Btree.Depth</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Btree.Depth</h1>
+
+<div class="code">
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations.Type.Loader</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.html#"><span class="id" title="library">Embed.Theory.Btree</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Leaves.html#"><span class="id" title="library">Embed.Theory.Btree.Leaves</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">Sigma_Notations</span>.<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">Id_Notations</span>.<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">equations_scope</span>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="BtreeDepth"><span class="id" title="section">BtreeDepth</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Equations</span> <a name="depth"><span class="id" title="definition">depth</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">xs</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> :=<br/>
+<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">bnil</span></a> <a class="idref" href="Embed.Theory.Btree.html#bnil"><span class="id" title="constructor">_</span></a>) := <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#O"><span class="id" title="constructor">O</span></a>;<br/>
+<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> (<a class="idref" href="Embed.Theory.Btree.html#bcons"><span class="id" title="constructor">bcons</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#y"><span class="id" title="variable">y</span></a>) := <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Nat.html#max"><span class="id" title="definition">Nat.max</span></a> (<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <span class="id" title="var">x</span>) (<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <span class="id" title="var">y</span>)).<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Embed.Theory.Btree.Depth.html#BtreeDepth"><span class="id" title="section">BtreeDepth</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="max_spec"><span class="id" title="definition">max_spec</span></a> (<span class="id" title="var">n</span> <span class="id" title="var">m</span> : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span>(<a class="idref" href="Embed.Theory.Btree.Depth.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#00fe0eaf5e6949f0a31725357afa4bba"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#m"><span class="id" title="variable">m</span></a>)%<span class="id" title="var">nat</span> <span class="id" title="notation">∧</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#eq"><span class="id" title="inductive">eq</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Arith.PeanoNat.html#Nat.max"><span class="id" title="definition">PeanoNat.Nat.max</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#m"><span class="id" title="variable">m</span></a>) <a class="idref" href="Embed.Theory.Btree.Depth.html#m"><span class="id" title="variable">m</span></a><span class="id" title="notation">)</span> <span class="id" title="notation">+</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span>(<a class="idref" href="Embed.Theory.Btree.Depth.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#cb53cf0ee22c036a03b4a9281c68b5a3"><span class="id" title="notation">≤</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#n"><span class="id" title="variable">n</span></a>)%<span class="id" title="var">nat</span> <span class="id" title="notation">∧</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#eq"><span class="id" title="inductive">eq</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Arith.PeanoNat.html#Nat.max"><span class="id" title="definition">PeanoNat.Nat.max</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#m"><span class="id" title="variable">m</span></a>) <a class="idref" href="Embed.Theory.Btree.Depth.html#n"><span class="id" title="variable">n</span></a><span class="id" title="notation">)</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="num_leaves_le_pow2_depth"><span class="id" title="definition">num_leaves_le_pow2_depth</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">x</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a>) :<br/>
+&nbsp;&nbsp;(<a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#cb53cf0ee22c036a03b4a9281c68b5a3"><span class="id" title="notation">≤</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Nat.html#pow"><span class="id" title="definition">Nat.pow</span></a> 2 (<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a>))%<span class="id" title="var">nat</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="BtreeSubtermDepth"><span class="id" title="section">BtreeSubtermDepth</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="btree_direct_subterm_depth"><span class="id" title="lemma">btree_direct_subterm_depth</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a>)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">xy</span> : <a class="idref" href="Embed.Theory.Btree.html#btree_direct_subterm"><span class="id" title="inductive">btree_direct_subterm</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#y"><span class="id" title="variable">y</span></a>) :<br/>
+&nbsp;&nbsp;(<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#00fe0eaf5e6949f0a31725357afa4bba"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#y"><span class="id" title="variable">y</span></a>)%<span class="id" title="var">nat</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="trans_clos_incl"><span class="id" title="lemma">trans_clos_incl</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} {<span class="id" title="var">R</span> <span class="id" title="var">S</span> : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Relations.Relation_Definitions.html#relation"><span class="id" title="definition">Relation_Definitions.relation</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a>}<br/>
+&nbsp;&nbsp;`{<span class="id" title="var">transitiveR</span> : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Classes.CRelationClasses.html#Transitive"><span class="id" title="class">Transitive</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#S"><span class="id" title="variable">S</span></a>} :<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Classes.RelationClasses.html#subrelation"><span class="id" title="class">RelationClasses.subrelation</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#R"><span class="id" title="variable">R</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#S"><span class="id" title="variable">S</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Classes.RelationClasses.html#subrelation"><span class="id" title="class">RelationClasses.subrelation</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Relations.Relation_Operators.html#clos_trans"><span class="id" title="inductive">Relation_Operators.clos_trans</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#R"><span class="id" title="variable">R</span></a>) <a class="idref" href="Embed.Theory.Btree.Depth.html#S"><span class="id" title="variable">S</span></a>.<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="lt_Transitive"><span class="id" title="instance">lt_Transitive</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Classes.CRelationClasses.html#Transitive"><span class="id" title="class">Transitive</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#lt"><span class="id" title="definition">lt</span></a> := <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Arith.PeanoNat.html#Nat.lt_trans"><span class="id" title="lemma">PeanoNat.Nat.lt_trans</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Program Instance</span> <a name="lt_Transitive_f"><span class="id" title="instance">lt_Transitive_f</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} {<span class="id" title="var">f</span> : <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>} : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Classes.CRelationClasses.html#Transitive"><span class="id" title="class">Transitive</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> ⇒ (<a class="idref" href="Embed.Theory.Btree.Depth.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#00fe0eaf5e6949f0a31725357afa4bba"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#y"><span class="id" title="variable">y</span></a>)%<span class="id" title="var">nat</span>) := <span class="id" title="var">_</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="btree_subterm_depth"><span class="id" title="lemma">btree_subterm_depth</span></a> {<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>} (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a>)<br/>
+&nbsp;&nbsp;(<span class="id" title="var">xy</span> : <a class="idref" href="Embed.Theory.Btree.html#btree_subterm"><span class="id" title="definition">btree_subterm</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#y"><span class="id" title="variable">y</span></a>) :<br/>
+&nbsp;&nbsp;(<a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#00fe0eaf5e6949f0a31725357afa4bba"><span class="id" title="notation">&lt;</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#depth"><span class="id" title="definition">depth</span></a> <a class="idref" href="Embed.Theory.Btree.Depth.html#y"><span class="id" title="variable">y</span></a>)%<span class="id" title="var">nat</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Embed.Theory.Btree.Depth.html#BtreeSubtermDepth"><span class="id" title="section">BtreeSubtermDepth</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

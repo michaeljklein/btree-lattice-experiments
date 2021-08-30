@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Btree.Canonical.Refined.Iso</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Btree.Canonical.Refined.Iso</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Coq</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#"><span class="id" title="library">Embed.Theory.Functor.Refined.Def</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#"><span class="id" title="library">Embed.Theory.Functor.Refined.Iso</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Datatypes.Prod.html#"><span class="id" title="library">Embed.Theory.Datatypes.Prod</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.html#"><span class="id" title="library">Embed.Theory.Btree</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Canonical.html#"><span class="id" title="library">Embed.Theory.Btree.Canonical</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Leaves.html#"><span class="id" title="library">Embed.Theory.Btree.Leaves</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Btree.Refined.Iso.html#"><span class="id" title="library">Embed.Theory.Btree.Refined.Iso</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="iso_refined_canonical_btree_plus"><span class="id" title="definition">iso_refined_canonical_btree_plus</span></a> (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <span class="id" title="keyword">∀</span> (<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>),<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> (<a class="idref" href="Embed.Theory.Btree.Canonical.html#canonical_btree"><span class="id" title="definition">canonical_btree</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Datatypes.html#S"><span class="id" title="constructor">S</span></a> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#0dacc1786c5ba797d47dd85006231633"><span class="id" title="notation">+</span></a> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#y"><span class="id" title="variable">y</span></a>)) <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="notation">≅</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> (<a class="idref" href="Embed.Theory.Btree.Canonical.html#canonical_btree"><span class="id" title="definition">canonical_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#A"><span class="id" title="variable">A</span></a> <span class="id" title="notation">∧</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> (<a class="idref" href="Embed.Theory.Btree.Canonical.html#canonical_btree"><span class="id" title="definition">canonical_btree</span></a> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#y"><span class="id" title="variable">y</span></a>) <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#A"><span class="id" title="variable">A</span></a>.<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="iso_refined_canonical_btree"><span class="id" title="definition">iso_refined_canonical_btree</span></a> (<span class="id" title="var">x</span> : @<a class="idref" href="Embed.Theory.Btree.html#btree"><span class="id" title="inductive">btree</span></a> 1) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Embed.Theory.Functor.Refined.Iso.html#iso_refined"><span class="id" title="definition">iso_refined</span></a> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#x"><span class="id" title="variable">x</span></a> (<a class="idref" href="Embed.Theory.Btree.Canonical.html#canonical_btree"><span class="id" title="definition">canonical_btree</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Peano.html#pred"><span class="id" title="abbreviation">pred</span></a> (<a class="idref" href="Embed.Theory.Btree.Leaves.html#num_leaves"><span class="id" title="definition">num_leaves</span></a> <a class="idref" href="Embed.Theory.Btree.Canonical.Refined.Iso.html#x"><span class="id" title="variable">x</span></a>))).<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

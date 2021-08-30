@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
+<title>Embed.Theory.Functor.Refined.Def</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Library Embed.Theory.Functor.Refined.Def</h1>
+
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Logic.Eqdep_dec.html#"><span class="id" title="library">Coq.Logic.Eqdep_dec</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">From</span> <span class="id" title="keyword">Equations</span> <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Equations</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Lib</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Theory</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">Category.Instance.Coq</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Embed.Theory.Functor.Void.html#"><span class="id" title="library">Embed.Theory.Functor.Void</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="FunctorRefinedDef"><span class="id" title="section">FunctorRefinedDef</span></a>.<br/>
+<span class="id" title="keyword">Context</span> `{<span class="id" title="var">F</span> : <span class="id" title="instance">Coq</span> <span class="id" title="notation">⟶</span> <span class="id" title="instance">Coq</span>}.<br/>
+<span class="id" title="keyword">Context</span> (<span class="id" title="var">x</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefinedDef.F"><span class="id" title="variable">F</span></a> 1).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="refined"><span class="id" title="definition">refined</span></a> (<span class="id" title="var">A</span> : <span class="id" title="keyword">Type</span>) :=<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">{</span></a> <span class="id" title="var">y</span> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">:</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefinedDef.F"><span class="id" title="variable">F</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">|</span></a> <a class="idref" href="Embed.Theory.Functor.Void.html#void"><span class="id" title="definition">void</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefinedDef.x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#6556914db359db999889decec6a4a562"><span class="id" title="notation">}</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="fmap_refined"><span class="id" title="definition">fmap_refined</span></a> {<span class="id" title="var">A</span> <span class="id" title="var">B</span>} (<span class="id" title="var">f</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#1c93e43e07fbeaeb6a625cb6614beb5d"><span class="id" title="notation">→</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#B"><span class="id" title="variable">B</span></a>) (<span class="id" title="var">xss</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#A"><span class="id" title="variable">A</span></a>) : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#B"><span class="id" title="variable">B</span></a>.<br/>
+<span class="id" title="keyword">Defined</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefinedDef"><span class="id" title="section">FunctorRefinedDef</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="FunctorRefined"><span class="id" title="section">FunctorRefined</span></a>.<br/>
+<span class="id" title="keyword">Context</span> `{<span class="id" title="var">F</span> : <span class="id" title="instance">Coq</span> <span class="id" title="notation">⟶</span> <span class="id" title="instance">Coq</span>}.<br/>
+<span class="id" title="keyword">Context</span> `(<span class="id" title="var">x</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefined.F"><span class="id" title="variable">F</span></a> 1).<br/>
+<span class="id" title="keyword">Context</span> `{<span class="id" title="var">F1_dec</span> : <span class="id" title="class">EqDec</span> (<a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefined.F"><span class="id" title="variable">F</span></a> 1)}.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="eq_refined"><span class="id" title="lemma">eq_refined</span></a> {<span class="id" title="var">A</span>} (<span class="id" title="var">xs</span> <span class="id" title="var">ys</span> : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefined.x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#A"><span class="id" title="variable">A</span></a>) (<span class="id" title="var">pf</span> : <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#proj1_sig"><span class="id" title="definition">proj1_sig</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#xs"><span class="id" title="variable">xs</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Specif.html#proj1_sig"><span class="id" title="definition">proj1_sig</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#ys"><span class="id" title="variable">ys</span></a>) : <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#xs"><span class="id" title="variable">xs</span></a> <a class="idref" href="http://coq.inria.fr/distrib/V8.10.2/stdlib//Coq.Init.Logic.html#6cd0f7b28b6092304087c7049437bb1a"><span class="id" title="notation">=</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#ys"><span class="id" title="variable">ys</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="refined_EqDec"><span class="id" title="lemma">refined_EqDec</span></a> {<span class="id" title="var">A</span>} {<span class="id" title="var">FA_dec</span> : <span class="id" title="class">EqDec</span> (<a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefined.F"><span class="id" title="variable">F</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#A"><span class="id" title="variable">A</span></a>)} : <span class="id" title="class">EqDec</span> (<a class="idref" href="Embed.Theory.Functor.Refined.Def.html#refined"><span class="id" title="definition">refined</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefined.x"><span class="id" title="variable">x</span></a> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#A"><span class="id" title="variable">A</span></a>).<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Embed.Theory.Functor.Refined.Def.html#FunctorRefined"><span class="id" title="section">FunctorRefined</span></a>.<br/>
+
+<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
