@@ -1,0 +1,11 @@
+*.bak
+*.dpd
+*.v.d
+*.v.tex
+.*.aux
+*.aux
+*.vo
+*.glob
+.coqdeps.d
+deps
+html
